@@ -1,0 +1,81 @@
+<!-- [JS-A08] Você está planejando uma viagem para os Estados Unidos e precisa converter algumas distâncias
+ do sistema métrico (metros) para o sistema imperial (jardas, pés, polegadas, milhas).
+ Para facilitar sua tarefa, você decidiu criar um conversor de unidades de comprimento.
+
+Instruções:
+
+Selecione a unidade de medida de destino no segundo menu suspenso.
+Você pode escolher entre "Jarda", "Pé", "Polegada" ou "Milha".
+Clique no botão "Converter" para ver o resultado da conversão.
+Dicas de Valores:
+
+Um metro é aproximadamente igual a 1.094 jardas, 3.281 pés, 39.37 polegadas ou 0.000621 milhas. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yankee Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div id="global_container">
+    <div id="title">
+    <h2>Imperial Converter</h2>
+    <h4>because the king's foot size matter!</h4>
+    </div>
+
+    <div id="input_div">
+      <label for="input_user">Type your <strong>METRIC</strong> value below:</label>
+      <input type="number" placeholder="values in meters, please!" id="input_user">
+    </div>
+
+    <span id="text_span">CONVERT TO...</span>
+
+    <div id="radio_divs">
+
+
+      <div class="radio_option">
+        <input type="radio" name="unity" id="yards" value="yards">
+        <label for="yards" id="yards_label">Yards</label>
+      </div>
+
+      <div class="radio_option">
+        <input type="radio" name="unity" id="feet" value="feets">
+        <label for="feet">Feets</label>
+      </div>
+
+      <div class="radio_option">
+        <input type="radio" name="unity" id="inches" value="inches">
+        <label for="inches">Inches</label>
+      </div>
+
+      <div class="radio_option">
+        <input type="radio" name="unity" id="miles" value="miles">
+        <label for="miles">Miles</label>
+      </div>
+
+    </div>
+
+    <div id="result_div">
+      <button id="btn">DO IT!</button>
+      <p class="result"></p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
