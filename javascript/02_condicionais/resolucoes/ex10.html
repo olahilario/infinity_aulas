@@ -1,0 +1,54 @@
+<!-- Exercício 10: Crie um programa que solicita ao usuário sua nota (A, B, C, D ou F)
+    e imprime uma mensagem correspondente com base na nota: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Javascript</title>
+</head>
+
+<body>
+    <h1>Exercícios de Javascript</h1>
+    <label for="nota_entrada">Informe sua nota</label>
+    <input type="text" name="nota" id="nota_entrada">
+    <p id="resultado"></p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        function action() {
+            // Exercício 1:Crie um programa que solicita ao usuário sua nota (A, B, C, D ou F)
+            // e imprime uma mensagem correspondente com base na nota:
+            nota_user = document.getElementById('nota_entrada').value
+            nota = nota_user.toLowerCase()
+            let resultado
+            if (nota == 'a'){
+                resultado = 'Parabéns! Tirou nota A.'
+            }
+            else if (nota == 'b'){
+                resultado = 'Boa! Tirou nota B.'
+            }
+            else if (nota == 'c'){
+                resultado = 'Na pinta! Tirou nota C.'
+            }
+            else if (nota == 'd'){
+                resultado = 'Que pena! Tirou nota D.'
+            }
+            else if (nota == 'e'){
+                resultado = 'Muito ruim. Nota E.'
+            }
+            else if (nota == 'f'){
+                resultado = 'Não tem como piorar. Nota F.'
+            }
+            else{
+                resultado = 'Dados inválidos.'
+            }
+            document.getElementById('resultado').innerText = resultado   // Altera o elemento HTML com id correspondente adicionando o texto
+        }
+    </script>
+</body>
+
+</html>

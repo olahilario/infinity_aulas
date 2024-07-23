@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="nome_usuario" type="number" placeholder="digite seu nome" />
+    <input id="profissao_usuario" type="text" placeholder="digite sua profissao" />
+    <button onclick="mostrarNaTela()">Mostrar nome</button>
+
+    <p id="mensagem"></p>
+
+    <script>
+        let nomeUsuario = document.getElementById("nome_usuario")
+        let profissao = document.getElementById("profissao_usuario")
+        let mensagem = document.getElementById("mensagem")
+
+        function mostrarNaTela() {
+            mensagem.innerHTML = `Oi, ${nomeUsuario.value}, sua profissão é ${profissao.value}`
+        }
+    </script>
+</body>
+</html>

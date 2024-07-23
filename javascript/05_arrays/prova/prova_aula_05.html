@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prova - Ala 05</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: black;">
+  <h1>Lista de tarefas domésticas da família agitada</h1>
+
+  <h4>Tenha atenção para digitar as tarefas corretamente.</h4>
+
+  <div id="div_lista">
+    <ol id="afazeres">
+
+    </ol>
+    
+  </div>
+
+  <div id="div_botoes">
+    <label for="add_tarefa"></label>
+    <input type="text" name="add_tarefa" id="add_tarefa" placeholder="Qual a próxima tarefa?">
+    <button id="adicionar" onclick="adicionarTarefa()">Adicionar tarefa</button>
+    <br><br>
+    <label for="tarefa_removida"></label>
+    <input type="text" name="tarefa_removida" id="tarefa_removida" placeholder="Qual tarefa deseja remover?">
+    <button id="remover" onclick="removerTarefa()">Remover tarefa</button>
+  </div>
+  <script src="prova_aula_05.js"></script>
+</body>
+</html>

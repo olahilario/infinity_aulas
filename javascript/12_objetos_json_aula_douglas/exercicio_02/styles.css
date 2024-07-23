@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0a6;
+}
+
+header {
+  background-color: #0925c2;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+.divBotao{
+  display: flex;
+  justify-content: center;
+}
+#botao{
+  background-color: #0925c2;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.aluno {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.aluno h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.aluno p {
+  margin-top: 0.5em;
+}

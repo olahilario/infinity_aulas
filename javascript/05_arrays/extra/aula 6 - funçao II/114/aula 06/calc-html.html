@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="numero1" type="number" placeholder="Digite o numero 1" />
+    <input id="numero2" type="number" placeholder="Digite o numero 2" />
+    <!-- <input id="operacao" type="text" placeholder="Digite a operação"/> -->
+
+<!--     <button onclick="operacao()">Cálculo</button> -->
+
+    <button onclick="soma()">+</button>
+    <button onclick="operacao('subtracao')">-</button>
+    <button onclick="operacao()">*</button>
+    <button onclick="operacao()">/</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        let numero1 = document.getElementById("numero1")
+        let numero2 = document.getElementById("numero2")
+        //let tipoOperacao = document.getElementById("operacao")
+        let resultado = document.getElementById("resultado")
+
+        function soma() {
+            resultado.innerHTML = Number(numero1.value) + Number(numero2.value)
+        }
+        
+        function operacao(tipoOperacao) {
+            switch (tipoOperacao) {
+                case "soma": 
+                    resultado.innerHTML = Number(numero1.value) + Number(numero2.value)
+                    break
+                case "subtracao": 
+                    resultado.innerHTML = Number(numero1.value) - Number(numero2.value)
+                    break
+                case "divisao": 
+                    resultado.innerHTML = Number(numero1.value) / Number(numero2.value)
+                    break
+                case "multiplicacao": 
+                    resultado.innerHTML = Number(numero1.value) * Number(numero2.value)
+                    break
+                default:
+                    alert("A operação é invalida")
+            }
+        }
+
+    </script>
+</body>
+</html>

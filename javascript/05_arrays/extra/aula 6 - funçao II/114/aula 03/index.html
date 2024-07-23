@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            while é uma estrutura de repetição utilizada 
+            geralmente quando não se sabe quantas vezes vai precisar repetir algum 
+            processo. Ele recebe uma condição que ele vai verificar
+            para parar quando a condição for falsa
+
+            A condição passada é retestada a cada repetição. Cuide para criar 
+            uma condição que tenha como ser falsa em algum momento. Utilize
+            alguma variável cujo valor seja modificado dentro do loop
+        */
+        let senhaUsuario = prompt("Digite sua senha")
+
+        while (senhaUsuario != "1234") {
+
+            //variaveis criadas aqui só existem aqui dentro
+            //Elas também são recriadas a cada repetição e voltam ao valor original
+            //tome cuidado
+            let senhaUsuario1 = prompt("Senha incorreta, tente novamente!")
+        }
+
+        alert("cheguei ao fim") 
+
+        /*
+            Você também pode estruturar seu loop para que ele
+            rode uma determinada quantidade de vezes. Basta criar
+            uma variável que vai servir como o acumulado de quantas
+            vezes o loop rodou e dizer que a condição para o loop parar 
+            é quando o acumulado chegar a tal quantidade
+        */
+        let acumulador = 1
+        let soma = 0
+        
+        while (acumulador <= 10) {
+            let usuario = Number(prompt("digite um numero para somar"))
+
+            soma += usuario
+            
+            acumulador -= 1
+        }
+        
+        /* a duferença do while para o 'do while' é que o 
+        'do while' roda pelo menos uma vez mesmo que a condição informada
+        já seja falsa desde a primeira tentativa. Já o while não roda 
+        se a condição ja for falsa no primeiro teste */
+        do {
+            console.log(acumulador)
+            acumulador++
+        } while (acumulador <= 10)
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- 
+    // Exercício 6: Crie um programa que determina se um ano dado é bissexto. Um ano bissexto é divisível por 4, mas não é divisível por 100, a menos que também seja divisível por 400.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+</head>
+
+<body>
+    <h1>Exercícios de Javascript</h1>
+    <label for="ano">Digite um ano: </label>
+    <input type="text" name="ano" id="ano">
+    <p id="resultado">VEREDITO</p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        function action() {
+            ano = parseInt(document.getElementById('ano').value)      // Captura o valor do input quando o botão é clicado
+            if (ano %400 == 0 || ano%4 ==0 && ano%100 !=0){
+                mensagem = `O ano ${ano} é bissexto.` 
+            } else{
+                mensagem = `O ano ${ano} NÃO é bissexto.`
+            }
+            document.getElementById('resultado').innerHTML = mensagem   // Altera o elemento HTML com id correspondente adicionando o texto
+        }
+    </script>
+</body>
+
+</html>

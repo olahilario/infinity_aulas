@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Javascript</title>
+</head>
+
+<body>
+    <h1>Exercícios de Javascript</h1>
+    <label for="entrada">Digite uma palavra qualquer</label>
+    <input type="text" name="entrada" id="entrada">
+    <p id="resultado"></p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        function action() {
+        // Exercício 4: Crie um programa que recebe uma string como entrada e verifica se ela começa com a letra 'A'.
+        // Imprima "Começa com A" se for verdadeiro, caso contrário, imprima "Não começa com A".
+
+            let entrada = document.getElementById('entrada').value      // Captura o valor do input quando o botão é clicado
+            if (entrada[0] == 'a' || entrada[0] == 'A'){
+                msg = "A palavra começa com A"
+            }
+            else{
+                msg = "A palavra não começa com A."
+            }
+            document.getElementById('resultado').innerHTML = msg   // Altera o elemento HTML com id correspondente adicionando o texto
+        }
+
+        
+    </script>
+</body>
+
+</html>

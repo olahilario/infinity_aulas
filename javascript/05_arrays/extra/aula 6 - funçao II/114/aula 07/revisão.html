@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function soma(numero1 = 0, numero2) {
+            if (!numero1 || !numero2) {
+                //strings vazias, numero 0, undefined e null
+                console.log("Informe todos os dados")
+                return
+            }
+            
+            return numero1 + numero2
+            //console.log(numero1 + numero2)   
+        }
+
+        const potencia = function (numero) {
+            return numero ** 2
+        } 
+
+        //arrow function normal
+        const potencia1 = (numero) => {
+            return numero ** 2
+        }
+
+        //arrow function com apenas um parametro
+        const potencia2 = numero => {
+            return numero ** 2
+        }
+
+        //arrow function com apenas uma linha de retorno
+        const potencia3 = numero => numero ** 2
+        
+        function percorrerArray(array, functionCallback) {
+            //esta função recebeu a estrutura de outra função
+            //então, ela pode chamar essa outra
+            for (let item of array) {
+                functionCallback(item)
+            }
+        }
+
+        //função que vai servir como callback
+        function letraGrande(nome) {
+            console.log(nome.toUpperCase())
+            return nome.toUpperCase()
+        }
+
+        let nomes = ["Fernanda", "Caio", "Gabriel"]
+        
+        //callback - a gente passa apenas o nome da função para
+        //ele saber o que vai chamar 
+        //percorrerArray(nomes, letraGrande)
+        percorrerArray(nomes, nome => nome.toUpperCase())
+
+    </script>
+</body>
+</html>

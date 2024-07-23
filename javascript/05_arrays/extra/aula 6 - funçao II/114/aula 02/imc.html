@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let peso = Number(prompt("Digite o peso em kg"))
+        let altura = Number(prompt("Digite a altura em metros (Coloque ponto ao invés de vírgula)"))
+
+        const imc = (peso / (altura * altura)).toFixed(1)
+
+        if (imc < 16.9) {
+            alert(`O seu imc é ${imc} e você está muito abaixo do peso`)
+        } else if (imc < 18.4) {
+            alert(`O seu imc é ${imc} e você está abaixo do peso`)
+        } else if (imc < 24.9) {
+            alert(`O seu imc é ${imc} e você está no peso normal`)
+        } else if (imc < 29.9) {
+            alert(`O seu imc é ${imc} e você está acima do peso`)
+        } else if (imc < 34.9) {
+            alert(`O seu imc é ${imc} e você está na obesidade I`)
+        } else if (imc < 40) {
+            alert(`O seu imc é ${imc} e você está na obesidade II`)
+        } else {
+            alert(`O seu imc é ${imc} e você está na obesidade III`)
+        }
+    </script>
+</body>
+</html>

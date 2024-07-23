@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="item">Um item</p>
+    <p class="item">Um item</p>
+    <p class="item">Um item</p>
+    <p class="item">Um item</p>
+    <p class="item">Um item</p>
+
+    <script>
+        //Implemente a função necessaria para capturar todos os elementos da classe "item" e altere o texto desses items para um a sua escolha.
+        paragrafos = document.getElementsByClassName('item')
+
+        for (p of paragrafos){
+            p.innerText = 'lalalala'
+            console.log(p)
+        }
+    
+    </script>
+</body>
+
+</html>

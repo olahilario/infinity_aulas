@@ -1,0 +1,52 @@
+<!-- [JS-A07] Imagine que você está criando uma solução digital para restaurantes, incluindo uma calculadora de gorjetas de fácil uso. O objetivo é desenvolver uma página da web onde os clientes possam inserir o valor total da conta e escolher a qualidade do serviço: "Bom", "Regular" ou "Ruim". Para isso, serão utilizadas arrow functions e funções de callback. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Gorjetas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="global_container">
+    <div id="left">
+      <h1>HOW MUCH TO TIP?</h1>
+      <div id="div_bill">
+        <label for="total">How much was your bill?</label>
+        <input type="number" placeholder="$" id="bill">
+      </div>
+
+      <div id="div_rate">
+        <h1>RATE OUR SERVICE:</h1>
+        <div id="options">
+          <div>
+            <input type="radio" name="quality" value="very_good" id="very_good">
+            <label for="very_good" id="vey_good_text">Very Good</label>
+          </div>
+          <div>
+            <input type="radio" name="quality" value="ok" id="ok">
+            <label for="ok" id="ok_text">Acceptable</label>
+          </div>
+          <div>
+            <input type="radio" name="quality" value="very_bad" id="very_bad">
+            <label for="very_bad" id="very_bad_text">Very Bad</label>
+          </div>
+
+          <button type="button" id="btn">Calculate!</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="right">
+      <p id="tip">Tip Help?</p>
+    </div>
+
+  </div>
+
+  
+  <script src="scripts.js"></script>
+</body>
+</html>

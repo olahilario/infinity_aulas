@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedra papel ou tesoura</title>
+</head>
+<body>
+  <h1>PEDRA PAPEL OU TESOURA</h1>
+  <h2>Pedra vence tesoura, papel vence pedra, tesoura vence papel!</h2>
+  <h3>┌⁠|⁠∵⁠|⁠┘└⁠|⁠∵⁠|⁠┐</h3>
+  <div>
+    <input type="radio" name="radio1" id="pedra" value="pedra" onchange="escolha('pedra')">
+    <label for="pedra">Pedra</label>
+    <br>
+    <input type="radio" name="radio1" id="papel" value="papel" onchange="escolha('papel')">
+    <label for="papel">Papel</label>
+    <br>
+    <input type="radio" name="radio1" id="tesoura" value="tesoura" onchange="escolha('tesoura')">
+    <label for="tesoura">Tesoura</label>
+  </div>
+
+  <div>
+    <p id="maquina"></p>
+    <p id="jogador"></p>
+    <p id="resultado"></p>
+
+  </div>
+
+  <button id="botao" onclick="jogar()">JOGAR</button>
+  
+
+<script src="jokenpo.js"></script>
+</body>
+</html>

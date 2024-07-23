@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let contador = 0
+
+       /*  while (true) {
+            if (contador === 5) {
+                break
+            }
+
+            console.log(contador)
+            contador++
+        } */
+
+        while (true) {
+            contador++
+
+            if (contador === 5 || contador === 6) {
+                continue
+            }
+
+            if (contador === 10) {
+                break
+            }
+
+            console.log(contador)
+        }
+    </script>
+</body>
+</html>

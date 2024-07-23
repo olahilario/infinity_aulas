@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = Number(prompt("Digite um número"))
+        let mensagem = ''
+
+        //caso ele seja positivo e par
+        if (numero > 0 && numero % 2 === 0) {
+            mensagem = `O numero ${numero} é positivo e par`
+
+        } 
+        //se ele não entrar no if acima, ele pode ser apenas positivo,
+        //apenas par ou nem par e nem positivo. Verifico se ele falha
+        //nos dois aqui
+        else if (numero % 2 !== 0 && numero <= 0) {
+            mensagem = `O numero ${numero} não é par e não é positivo`
+        } 
+        //Se não entrar no else if acima, garanto que ele só falha em 
+        //uma das opções, ou em ser positivo ou em ser par. Testo se ele é positivo
+        else if (numero > 0) {
+            mensagem = `O numero ${numero} é positivo mas não é par`
+        } 
+        //Não entrou no de cima, significa que ele não é positivo mas é par,
+        //Pois já testamos a possibilidade dele não ser par na segunda condição
+        //Unica opção então, só preciso de um else
+        else {
+            mensagem = `O numero ${numero} é par mas não é positivo`
+        }
+
+        //mostro a informação na tela depois
+        alert(mensagem)
+    </script>
+</body>
+</html>

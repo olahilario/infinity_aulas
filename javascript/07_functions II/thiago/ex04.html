@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Senha</title>
+</head>
+
+<body>
+    <h1>Bem vindo de volta!</h1>
+    <form id="password-form">
+        <label for="password-input">Digite sua senha:</label>
+        <input type="password" id="password-input" placeholder="Senha">
+        <button type="submit" onclick="verificaSenha()" >Login</button>
+        <p id="feedback" style="color: red;"></p>
+    </form>
+    <script>
+        // Implemente a função necessária para verificar se o usuário entrou com a senha correta ou incorreta.
+        // Determine qual será a senha correta.
+        // Quando o usuário clicar no botão "Login" a senha deverá ser verificada, caso esteja correta a mensagem: "Senha correta!"
+        // em verde deverá ser exibida no parágrafo "feedback", caso contrário a mensagem "Senha Incorreta! Tente novamente"
+        // deverá ser exibida em vermelho no parágrafo "feedback".
+        const senha_correta = 'senhacorreta'
+        const senha_usuario = document.getElementById('password-input')
+        const mensagem = document.getElementById('feedback')
+        function verificaSenha(senha){
+            event.preventDefault()
+            if(senha_usuario.value === senha_correta){
+                mensagem.style.color = 'green'
+                mensagem.innerText = 'Senha correta!'
+            }
+            else{
+                mensagem.style.color = 'red'
+                mensagem.innerText = 'Senha incorreta! Tente novamente'
+            }
+        }
+
+    </script>
+</body>
+
+</html>

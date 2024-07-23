@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Titulo</h1>
+    <p>Primeiro paragrafo</p>
+    <p>Segundo paragrafo</p>
+    <p>Terceiro paragrafo</p>
+
+    <button id="btn-action"></button>
+    <script>
+        //Atenção nesse exercício só vale escrever dentro da tag "script".
+
+        //Implemente a função necessaria para alterar a cor de fundo dos paragrafos na tela e o texto da tag h1 para um texto à sua escolha.
+
+        let titulo = document.getElementsByTagName('h1');
+        let paragrafos = document.getElementsByTagName('p');
+        let botao = document.getElementById('btn-action');
+
+        for (let p of paragrafos){
+            p.style.display = 'inline'
+            p.style.backgroundColor = 'orange'
+        }
+
+        botao.innerText = 'TROCAR h1'
+        botao.style.backgroundColor = 'orange';
+        botao.style.border = '0px';
+        botao.style.cursor = 'pointer'
+
+
+
+
+
+
+        
+    </script>
+</body>
+
+</html>

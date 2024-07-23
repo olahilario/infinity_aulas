@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="div-pai">
+        <h1>LISTA DE TAREFAS</h1>
+        <input type="text" id="input-task" placeholder="Adicione sua tarefa!">
+        <button id="button-add">Adicionar</button>
+        <ul id="lista"></ul>
+
+    </div>
+
+
+
+    
+    <script>
+        let div_pai = document.getElementById("div_pai");
+        let botao_add = document.getElementById('button-add')
+        let lista = document.getElementById('lista')
+
+        function addTask(){
+            let tarefa_input = document.getElementById('input-task').value
+            let li_checkbox = document.createElement('input')
+            let li_tarefa = document.createElement('li')
+            let li_trash = document.createElement('img')
+            let div_tarefa = document.createElement('div')
+            
+            li_checkbox.type = 'checkbox'
+            li_tarefa.innerText = tarefa_input
+
+            li_trash.src = "trashcan.jfif"
+            li_trash.classList.add('lixeira')
+            
+            li_trash.addEventListener('click', removeTask)
+            div_tarefa.classList.add('div-tarefa')
+            div_tarefa.append(li_checkbox, li_tarefa, li_trash)
+            lista.append(div_tarefa)
+            document.getElementById('input-task').value = ''
+            
+        }
+        
+        function removeTask(evento){
+            let removida = evento.target.parentElement
+            removida.remove()
+        }
+
+        botao_add.addEventListener('click',addTask)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div>
+        <input id="display" type="text" readonly />
+        <div>
+            <button onclick="adicionarNoDisplay('1')">1</button>
+            <button onclick="adicionarNoDisplay('2')">2</button>
+            <button onclick="adicionarNoDisplay('+')">+</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById("display")
+        //display.value = "teste"
+        
+        function adicionarNoDisplay(caractere) {
+            display.value += caractere
+        }
+    </script>
+</body>
+</html>

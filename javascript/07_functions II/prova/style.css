@@ -1,0 +1,86 @@
+body{
+  background-image: url(./background2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+#global_container{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  font-family: Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+#left{
+  grid-column: 1;
+  background-color: #0D0D0D;
+  mix-blend-mode: overlay;
+  color: #F2F2F2;
+  /* border-radius: 10px; */
+  padding: 20px;
+}
+
+#div_bill{
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  font-weight: bolder;
+  line-height: 50px;
+
+}
+
+#div_bill input{
+  max-width: 10vw;
+  font-size: larger;
+  padding: 8x;
+}
+
+#div_rate{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: medium;
+  line-height: 27px;
+}
+
+#options{
+  display: flex;
+  flex-direction: column;
+}
+
+
+#right{
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #40011E;
+  mix-blend-mode: soft-light;
+  color: #F2F2F2;
+  border-radius: 10px;
+  font-size: 70px;
+  text-align: center;
+  align-self: center;
+}
+
+#options input[type='radio']:hover{
+  cursor: crosshair;
+}
+
+#btn{
+  cursor: crosshair;
+  height: 10vh;
+  width: fit-content;
+  background-color: hsl(0, 0%, 95%);
+  color: #0D0D0D;
+  border: none;
+  font-family: Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 21px;
+  margin-top: 3vh;
+}
+
+#btn:hover{
+  cursor: pointer;
+}

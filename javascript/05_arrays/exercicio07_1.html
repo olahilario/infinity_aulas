@@ -1,0 +1,35 @@
+<!-- 7.1 - Crie um algoritmo que lê a seguinte lista de nomes e posiciona esses nomes num elemento li dentro da ul em um documento HTML
+let names = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah", "Ian", "Julia"]; -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Criando elementos e posiconando elementos HTML com DOM</h1>
+    <p>Lista de amigos</p>
+    <ul id="resultado"></ul>
+    <button onclick="action()">Listar amigos!</button>
+
+    <script>
+        listaHTML = document.getElementById('resultado')
+        // A lista de amigos vai inicar com um valor criado por nós:
+
+        function action() {
+            let lista = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah", "Ian", "Julia"];
+            for (nome of lista){
+                let item = document.createElement('li')
+                item.innerText = nome
+                listaHTML.append(item)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

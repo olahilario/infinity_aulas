@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Meus amigos:</h1>
+    <ul>
+
+    </ul>
+
+
+    <button id="btn-amigo" onclick="listar()">Listar amigos</button>
+    <script>
+        let listaAmigos = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah", "Ian", "Julia"];
+
+        //Implemente a função necessaria para que os nomes de cada um dos amigos da lista seja adicionado como um novo elemento list item (li) dentro do elemento ul.
+
+        let HTMLCol = document.getElementsByTagName('ul')
+        let listaHTML = HTMLCol[0]
+
+        function listar(){
+            listaHTML.innerHTML = ''
+            for (let nome of listaAmigos){
+            let amigo = document.createElement('li')
+            amigo.innerText = nome
+            listaHTML.appendChild(amigo)
+        }
+    
+        }
+
+    </script>
+</body>
+
+</html>

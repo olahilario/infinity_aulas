@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero1 = Number(prompt("Digite o primeiro numero"))
+        let numero2 = Number(prompt("Digite o segundo numero"))
+        let operacao = Number(prompt("Digite a operacao: soma | subtraçao"))
+        
+        function operacaoMatematica(num1, num2, operacao) {
+            /* if (operacao === 'soma') {
+                return num1 + num2
+            } */
+
+            switch (operacao) {
+                case "soma": 
+                    return num1 + num2
+                case "subtracao": 
+                    return num1 - num2
+                case "divisao": 
+                    return num1 / num2
+                case "multiplicacao": 
+                    return num1 * num2
+                default:
+                    alert("A operação é invalida")
+                
+            }
+        }
+
+        operacaoMatematica(numero1, numero2, operacao)
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+https://drive.google.com/drive/folders/19Hyi2MJ3ZzD5KufMi4AFWH6oDZvENqZg?usp=sharing
+
+--------------------------------- calculadora -------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .calculadora {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            border: 1px solid rgb(186, 186, 186);
+            border-radius: 5px;
+            padding: 10px;
+            gap: 10px
+        }
+
+        .calculadora input {
+            height: 45px;
+            text-align: end;
+            font-size: 25px;
+            padding: 5px;
+        }
+
+        button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: rgb(209, 209, 209);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .botoes, .numeros, .operadores {
+            display: flex;
+        }
+
+        .numeros {
+            width: 150px;
+            flex-wrap: wrap;
+            gap: 5px
+        }
+        
+        .operadores {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .operadores button {
+           height: 31px;
+        }
+
+        .limpar {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <input id="display" type="text" placeholder="0" readonly  />
+        <div class="botoes">
+            <div class="numeros">
+                <button onclick="adicionarNoDisplay('1')">1</button>
+                <button onclick="adicionarNoDisplay('2')">2</button>
+                <button onclick="adicionarNoDisplay('3')">3</button>
+                <button onclick="adicionarNoDisplay('4')">4</button>
+                <button onclick="adicionarNoDisplay('5')">5</button>
+                <button onclick="adicionarNoDisplay('6')">6</button>
+                <button onclick="adicionarNoDisplay('7')">7</button>
+                <button onclick="adicionarNoDisplay('8')">8</button>
+                <button onclick="adicionarNoDisplay('9')">9</button>
+                <button onclick="adicionarNoDisplay(',')">,</button>
+                <button onclick="adicionarNoDisplay('0')">0</button>
+                <button onclick="calculo()">=</button>
+            </div>
+            <div class="operadores">
+                <button class="limpar" onclick="limpar()">c</button>
+                <button onclick="adicionarNoDisplay('+')">+</button>
+                <button onclick="adicionarNoDisplay('-')">-</button>
+                <button onclick="adicionarNoDisplay('*')">*</button>
+                <button onclick="adicionarNoDisplay('/')">/</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById("display")
+        //display.value = "teste"
+        
+        function adicionarNoDisplay(caractere) {
+            //dontpad => 114-19-05
+            const operadores = "+*-/"
+            const ultimoCaractere = display.value[display.value.length - 1]
+        
+            //se não existir valor no display e o caractere for um operador, não adiciona o caractere
+            if (display.value === "" && operadores.includes(caractere)) {
+                return;
+            }
+
+            //ultimo caractere do display é operador e add uma virgula, adiciona um 0 antes
+            if (operadores.includes(ultimoCaractere) && caractere === ',') {
+                display.value += "0" + caractere
+
+                return;
+            }
+
+            //ultimo caractere do display é virgula e add um operador, virgula some - pode usar o msm if dos operadores
+            if (    
+                operadores.includes(caractere) && 
+                (operadores.includes(ultimoCaractere) || ultimoCaractere === ",")
+            ) {
+                const operacaoNova = display.value.slice(0, display.value.length - 1)
+
+                display.value = operacaoNova + caractere
+                return;
+            }
+            
+            //cuidado para travar a função com return após cada validação, senão duplica o dado na tela
+        
+            display.value += caractere
+        }
+
+        function calculo() {
+            const operadores = "+*-/"
+            const ultimoCaractere = display.value[display.value.length - 1]
+            let resultado = display.value.replaceAll(",", ".")
+
+            if (operadores.includes(ultimoCaractere)) {
+                const operacaoNova = resultado.slice(0, display.value.length - 1)
+
+                resultado = eval(operacaoNova)
+            } else {
+                resultado = eval(resultado)
+            }
+
+            display.value = resultado
+        }
+
+        function limpar() {
+            display.value = ""
+        }
+
+    </script>

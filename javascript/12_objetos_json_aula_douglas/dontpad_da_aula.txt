@@ -1,0 +1,304 @@
+Código 01:
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Alunos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Cadastro de Alunos</h1>
+  </header>
+  <main id="alunos">
+    <!-- Aqui serão inseridos os alunos dinamicamente -->
+  </main>
+  <p class="divBotao"><button id="botao">Exibir Alunos Cadastrados</button></p>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+css:
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0a6;
+}
+
+header {
+  background-color: #0925c2;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+.divBotao{
+  display: flex;
+  justify-content: center;
+}
+#botao{
+  background-color: #0925c2;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.aluno {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.aluno h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.aluno p {
+  margin-top: 0.5em;
+}
+
+const alunos = [
+  {
+      "nome": "João Silva",
+      "idade": 20,
+      "curso": "Engenharia",
+      "disciplinas": ["Matemática", "Física", "Programação"]
+  },
+  {
+      "nome": "Maria Souza",
+      "idade": 21,
+      "curso": "Administração",
+      "disciplinas": ["Economia", "Gestão", "Contabilidade"]
+  }
+];
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+JAVASCRIPT:
+
+let botao = document.getElementById('botao')
+let containerAluno = document.getElementById('alunos')
+
+
+function exibirAlunos (){
+    alunos.forEach(aluno=>{
+        const alunoHTML = `
+        <article class="aluno">
+        <h2>${aluno.nome}<h2>
+        <p><strong>Idade:</strong>${aluno.idade}</p>
+        <p><strong>Curso:</strong>${aluno.curso}</p>
+        <p>Disciplinas:${aluno.disciplinas.join(',')}</p>
+        </article>
+
+        `;
+        containerAluno.innerHTML += alunoHTML
+
+    })
+}
+botao.addEventListener('click',exibirAlunos)
+
+
+
+
+EXERCÍCIO 2:
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Alunos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Cadastro de Alunos</h1>
+  </header>
+
+  <section>
+    <form id="formAluno">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required><br>
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" required><br>
+      <label for="curso">Curso:</label>
+      <input type="text" id="curso" name="curso" required><br>
+      <label for="disciplinas">Disciplinas (separadas por vírgula):</label>
+      <input type="text" id="disciplinas" name="disciplinas" required><br>
+      <div id="botoes">
+        <button type="submit" id="botaoCadastrar">Cadastrar Aluno</button>
+        <button type="button" id="botaoVisualizar">Visualizar Alunos</button>
+      </div>
+    </form>
+  </section>
+  <main id="alunos">
+    <!-- Aqui serão inseridos os alunos dinamicamente -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+SCRIPT:
+const containerAlunos = document.getElementById('alunos');
+const formAluno = document.getElementById('formAluno');
+const botaoVisualizar = document.getElementById('botaoVisualizar')
+
+// Simulação de dados iniciais vindo do servidor (em um ambiente real, seria carregado via fetch)
+let alunos = [
+    {
+        "nome": "João Silva",
+        "idade": 20,
+        "curso": "Engenharia",
+        "disciplinas": ["Matemática", "Física", "Programação"]
+    },
+    {
+        "nome": "Maria Souza",
+        "idade": 21,
+        "curso": "Administração",
+        "disciplinas": ["Economia", "Gestão", "Contabilidade"]
+    }
+];
+
+// Função para renderizar os alunos na página
+function renderizarAlunos() {
+    containerAlunos.innerHTML = ''; // Limpa o conteúdo atual
+    alunos.forEach(aluno => {
+        const alunoHTML = `
+            <article class="aluno">
+                <h2>${aluno.nome}</h2>
+                <p><strong>Idade:</strong> ${aluno.idade}</p>
+                <p><strong>Curso:</strong> ${aluno.curso}</p>
+                <p><strong>Disciplinas:</strong> ${aluno.disciplinas.join(', ')}</p>
+            </article>
+        `;
+        containerAlunos.innerHTML += alunoHTML;
+    });
+}
+
+// Evento de envio do formulário para cadastrar novo aluno
+formAluno.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
+
+    // Captura dos dados do formulário
+    const novoAluno = {
+        nome: formAluno.nome.value,
+        idade: parseInt(formAluno.idade.value),
+        curso: formAluno.curso.value,
+        disciplinas: formAluno.disciplinas.value.split(',').map(disciplina => disciplina.trim())
+    };
+
+    // Adiciona o novo aluno à lista
+    alunos.push(novoAluno);
+
+    
+    // Limpa o formulário para novo cadastro
+    formAluno.reset();
+    
+    console.log(alunos)
+  });
+  
+  // Inicializa a exibição dos alunos ao carregar a página
+  botaoVisualizar.addEventListener("click",renderizarAlunos);
+
+
+CSS:
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0a6;
+
+}
+
+header {
+  background-color: #0925c2;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+section{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+form{
+  margin-top: 10px;
+  background-color: rgb(87, 127, 214);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 10px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+#botoes{
+  display: flex;
+
+  justify-content: center;
+  gap: 2px
+  ;
+  padding: 10px;
+
+}
+button{
+  background-color: #54c707;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+}
+input{border-radius: 3px;}
+
+.aluno {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.aluno h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.aluno p {
+  margin-top: 0.5em;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = Number(prompt("Digite o número"))
+        let ePrimo = true
+
+        for (let i = 2; i < numero; i++) {
+            if (numero % i === 0) {
+                ePrimo = false
+
+                break
+            }
+        }
+
+        if (ePrimo) {
+            alert("É primo")
+        } else {
+            alert("Não é primo")
+        }
+    </script>
+</body>
+</html>

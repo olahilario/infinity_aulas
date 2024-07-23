@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function chamarFuncoes() {
+            console.log("Estou na função de chamar funções")
+            mostrarNoConsole()
+        }
+
+        let mensagem = "oie"
+
+        function mostrarNoConsole(parametro) {
+            console.log(parametro)
+        } 
+
+        //mostrarNoConsole(mensagem)
+
+        function soma(num1, num2, num3 = 0) {
+            if (typeof num1 !== "number" || !num1) {
+                console.log("Preencha o dado corretamente")
+                return
+            }
+
+            console.log(num1 + num2 + num3) 
+        }
+
+        soma(1,2)
+
+        /* 
+            Implemente uma função que receba um número como parâmetro e retorne o quadrado desse número.
+
+            Crie uma função que simule uma calculadora básica. Ela deve aceitar dois números e uma operação (soma, subtração, multiplicação, divisão) como parâmetros e retornar o resultado.
+
+            dontpad -> 114-05-05
+        
+        */
+       
+    </script>
+</body>
+</html>

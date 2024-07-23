@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //console.log('10' == 10) //true
+        //console.log('10' === 10) //false
+
+        //console.log('10' != 10) //false
+        //console.log('10' !== 10) //true
+
+        let hora = 11
+        let saudacao = hora >= 5 && hora < 12 ? "Bom dia" 
+        : hora < 19 ? "Boa tarde" 
+        : hora < 23 ? "Boa noite"
+        : "Boa madrugada"
+
+
+        let eDia = hora >= 5 && hora < 12
+
+        //console.log(hora >= 5 && hora < 12)
+        //console.log(hora >= 5 || hora < 12)
+        console.log(!(hora <= 5))
+
+        if (hora >= 5 && hora < 12) { 
+            saudacao = 'Bom dia'
+        } else if (hora < 19) {
+            saudacao = 'Boa tarde'
+        } else if (hora < 23) {
+            saudacao = 'Boa noite'
+        } else {
+            saudacao = 'Boa madrugada, pare de jogar lol'
+        }
+
+
+       //console.log(saudacao)
+
+        let numero = 5
+        let mensagem = numero % 2 == 0 && numero > 0 ? "É par e positivo" : "não é"
+
+
+        let dia = 4
+
+        
+        switch (dia) {
+            case 1:
+                alert("Domingo"); 
+                break
+            case 2:
+                alert("Segunda")
+                break
+            case 3:
+                alert("Terça")
+                break
+            default:
+                alert("Dia inválido")
+        }
+    </script>
+</body>
+</html>

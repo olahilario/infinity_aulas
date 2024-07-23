@@ -1,0 +1,33 @@
+<!-- // Exercício 3: Escreva um programa que solicita a idade do usuário e determina se ele é elegível para votar (18 anos ou mais). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+
+<body>
+    <h1>Exercício 3</h1>
+    <label for="entrada">Informe sua idade</label>
+    <input type="number" name="entrada" id="entrada">
+    <p id="resultado">Veredito</p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        function action() {
+            idade = parseInt(document.getElementById('entrada').value)      // Captura o valor do input quando o botão é clicado
+            if (idade >= 18) {
+                msg = `Você tem ${idade} anos e já pode votar!`
+            } else{
+                msg = `Você tem ${idade} anos e ainda não pode votar!`
+        
+            }
+            document.getElementById('resultado').innerHTML = msg   // Altera o elemento HTML com id correspondente adicionando o texto
+        }
+    </script>
+</body>
+
+</html>

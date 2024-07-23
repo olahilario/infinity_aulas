@@ -1,0 +1,46 @@
+<!--7.2 - Crie uma função que filtre os nomes dessa lista a partir de caracteres digitados em um input. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Criando elementos e posiconando elementos HTML com DOM</h1>
+    <p>Lista de amigos</p>
+    <ul id="resultado"></ul>
+    <button onclick="action()">Listar amigos!</button>
+
+    <button onclick="filtrar()">Filtrar quem termina com a letra E</button>
+
+    <script>
+        listaHTML = document.getElementById('resultado')
+        // A lista de amigos vai inicar com um valor criado por nós:
+    let lista = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah", "Ian", "Julia"];
+    let lista_filtrada = []
+        function action() {
+            //let lista = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah", "Ian", "Julia"];
+            for (nome of lista){
+                let item = document.createElement('li')
+                item.innerText = nome
+                listaHTML.append(item)
+            }
+        }
+
+        function filtrar(){
+            // listaHTML.innerText = ''
+            // for (nome of listaHTML){
+            //     if (nome[nome.length-1] !== 'e'){
+            //         listaHTML.remove(item)
+            //     }
+            listaHTML = listaHTML.filter(nome => nome[nome.length -1] == 'e')
+        }
+
+    </script>
+</body>
+
+</html>

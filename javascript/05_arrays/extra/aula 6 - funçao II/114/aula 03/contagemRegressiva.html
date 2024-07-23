@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let usuario = Number(prompt("Digite um numero para a contagem regressiva"))
+
+        //Dependendo de como for estruturado, o while pode deixar passar um -1
+
+        /*
+            Digamos que ele estreja com a condição abaixo
+            Sendo usuario igual a 0, ele entra na repetição,
+            decrementa usuário. Ele agora é -1. Mas o while só vai
+            testar esse novo valor quando ele terminar de rodar a 
+            repetição atual. Então ele depois vai mostrar o -1 na tela,
+            rodar a nova repetição e ai sim, testar e verificar que 
+            -1 não é maior ou igual a 0 e sair do loop.
+
+            Você pode inverter a ordem do passo a passo e só decrementar 
+            o valor no final da repetição, para que ele não seja considerado 
+            em qualquer uso da logica, ou dizer que a condição do loop
+            vai ser usuario > 0, impedindo que o 0 entre e desça para -1
+        */
+        while (usuario >= 0) {
+            usuario--
+            document.writeln(usuario + "<br>")
+        }
+    </script>
+</body>
+</html>

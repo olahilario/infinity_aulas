@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="voltar()" id="prev">Anterior</button>
+        <img id="gallery" src="image1.jpg" alt="Image 1">
+        <button onclick="avancar()" id="next">Próxima</button>
+    </div>
+
+    <script>
+        const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
+        let currentIndex = 0;
+
+        // Implemente as funções necessarias para que o botão "Próxima" apresente a proxima imagem da galeria
+        // O botão "Anterior" apresente a imagem anterior.
+        imagem_da_vez = document.getElementById('gallery')
+        function voltar(){
+         currentIndex -= 1
+         if (currentIndex < 0){
+          currentIndex = images.length - 1
+         }
+         imagem_da_vez.src = images[currentIndex]
+        }
+        
+        function avancar(){
+          currentIndex += 1
+          if (currentIndex > images.length - 1){
+          currentIndex = 0
+          }
+        imagem_da_vez.src = images[currentIndex]
+        }
+       
+
+    </script>
+</body>
+
+</html>

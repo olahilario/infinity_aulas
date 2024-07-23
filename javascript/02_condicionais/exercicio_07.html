@@ -1,0 +1,44 @@
+<!-- // Exercício 7: Escreva um programa que recebe três números como entrada e imprime o maior dos três.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+
+<body>
+    <h1>Exercício 7</h1>
+    <label for="num1">Número 1</label>
+    <input type="number" name="num1" id="num1">
+    <label for="num2">Número 2</label>
+    <input type="number" name="num2" id="num2">
+    <label for="num1">Número 3</label>
+    <input type="number" name="num3" id="num3">
+    <p id="resultado">Resultado da soma:</p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        function action() {
+            let n1 = parseFloat(document.getElementById('num1').value)      // Captura o valor do input quando o botão é clicado
+            let n2 = parseFloat(document.getElementById('num2').value)      // Captura o valor do input quando o botão é clicado
+            let n3 = parseFloat(document.getElementById('num3').value)      // Captura o valor do input quando o botão é clicado
+
+            if (n1 > n2 && n1 > n3){
+                maior = n1
+            }
+
+            else if (n2 > n1 && n2 > n3){
+                maior = n2
+            } else{
+                maior = n3
+            }
+            document.getElementById('resultado').innerHTML = `O maior número é o ${maior}`   // Altera o elemento HTML com id correspondente adicionando o texto
+        }
+    </script>
+</body>
+
+</html>

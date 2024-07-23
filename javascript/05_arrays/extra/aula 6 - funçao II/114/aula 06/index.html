@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let alunos = ["Fernanda", "José", "Henrique"] 
+        //arrays possuem posicionamentos que sempre começam com 0
+
+        //adicionam elementos no final
+        //alunos.push("Agata", "luiza")
+        //adicionam elementos no inicio
+        //alunos.unshift("Agata")
+
+
+        //retira elementos no final
+        //alunos.pop()
+
+        //retira elementos no inicio
+        //alunos.shift()
+
+        //o primeiro valor informado para o splice é o index de 
+        //onde ele vai fazer o processo
+        alunos.splice(4, 0, "Luiza", "Agata")
+
+        for (let i = 0; i < alunos.length; i++) {
+            console.log(alunos[i].toUpperCase())
+        }
+
+        for (let aluno of alunos) {
+            
+        }
+
+    </script>
+</body>
+</html>

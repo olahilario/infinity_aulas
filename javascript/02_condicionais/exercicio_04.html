@@ -1,0 +1,33 @@
+<!-- // Exercício 4: Crie um programa que recebe uma string como entrada e verifica se ela começa com a letra 'A'. Imprima "Começa com A" se for verdadeiro, caso contrário, imprima "Não começa com A". -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+
+<body>
+    <h1>Exercício 4</h1>
+    <label for="entrada">Informe uma palavra</label>
+    <input type="text" name="entrada" id="entrada">
+    <p id="resultado"></p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        function action() {
+            palavra = document.getElementById('entrada').value      // Captura o valor do input quando o botão é clicado
+            if (palavra.toUpperCase()[0] == 'A'){
+                mensagem = `A palavra ${palavra} começa com ${palavra[0]}` 
+            } else{
+                mensagem = `A palavra ${palavra} NÃO começa com ${palavra[0]}` 
+            }
+            document.getElementById('resultado').innerHTML = mensagem   // Altera o elemento HTML com id correspondente adicionando o texto
+        }
+    </script>
+</body>
+
+</html>
+

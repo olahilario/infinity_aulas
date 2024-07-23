@@ -1,0 +1,31 @@
+[
+    {"nome": "João Silva",
+    "idade": 36,
+    "curso": "Engenharia",
+    "disciplinas": ["Matemática", "Economia", "Lógica"]
+},
+    {"nome": "Brunelle Freitas",
+    "idade": 34,
+    "curso" : "Direito",
+    "disciplinas": ["História", "Filosofia", "Sociologia"] 
+},
+
+    {"nome": "Maria da Conceição",
+    "idade": 65,
+    "curso" : "Biologia",
+    "disciplinas": ["Genética", "Ecologia", "Botânica"] 
+},
+
+    {"nome": "Maria da Conceição",
+    "idade": 65,
+    "curso" : "Biologia",
+    "disciplinas": ["Genética", "Ecologia", "Botânica"] 
+},
+
+    {"nome": "Pedro Hilário",
+    "idade": 35,
+    "curso" : "Comunicação Social",
+    "disciplinas": ["Fotojornalismo", "Narrativa jornalística", "Teorias da Comunicação"] 
+}
+
+]

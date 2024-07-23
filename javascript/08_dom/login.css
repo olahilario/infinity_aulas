@@ -1,0 +1,14 @@
+body{
+  background-color: #223240;
+}
+
+h1 {
+  color: #93D94E;
+  font-family: monospace;
+  text-align: center;
+}
+
+label, input, button {
+  display: block;
+  color: #3B8C66;
+}

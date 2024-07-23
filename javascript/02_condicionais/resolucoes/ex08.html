@@ -1,0 +1,35 @@
+<!-- // Exercício 8: Crie um programa que solicita a idade do usuário e o país de residência. Se a idade for superior a 65 anos ou o país for "Cidade da Aposentadoria", imprima "Você se qualifica para benefícios de aposentadoria"; caso contrário, imprima "Você não se qualifica para benefícios de aposentadoria". -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Javascript</title>
+</head>
+
+<body>
+    <h1>Exercícios de Javascript</h1>
+    <label for="idade">Idade</label>
+    <input type="text" name="idade" id="idade">
+    <label for="cidade">Cidade</label>
+    <input type="text" name="cidade" id="cidade">
+    <p id="resultado">Resultado da análise: </p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        function action() {
+            let idade = parseInt(document.getElementById('idade').value)      // Captura o valor do input quando o botão é clicado
+            let cidade = document.getElementById('cidade').value      // Captura o valor do input quando o botão é clicado
+            if (idade > 65 || cidade.toLowerCase() == 'cidade da aposentadoria'){
+                msg = 'Você se qualifica para os benefícios da aposentadoria' 
+            }else{
+                msg = 'Você NÃO se qualifica para os benefícios da aposentadoria'
+            }
+            document.getElementById('resultado').innerHTML = msg   // Altera o elemento HTML com id correspondente adicionando o texto
+        }
+    </script>
+</body>
+
+</html>

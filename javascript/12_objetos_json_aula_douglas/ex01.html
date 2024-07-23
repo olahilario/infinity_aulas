@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura JSON</title>
+</head>
+<body>
+    
+    
+
+
+
+    <script>
+
+    const alunos = [
+    
+    {"nome": "João Silva",
+    "idade": 36,
+    "curso": "Engenharia",
+    "disciplinas": ["Matemática", "Economia", "Lógica"]
+},
+    {"nome": "Brunelle Freitas",
+    "idade": 34,
+    "curso" : "Direito",
+    "disciplinas": ["História", "Filosofia", "Sociologia"] 
+},
+
+    {"nome": "Maria da Conceição",
+    "idade": 65,
+    "curso" : "Biologia",
+    "disciplinas": ["Genética", "Ecologia", "Botânica"] 
+},
+
+    {"nome": "Camila Rocha",
+    "idade": 65,
+    "curso" : "Biologia",
+    "disciplinas": ["Genética", "Ecologia", "Botânica"] 
+},
+
+    {"nome": "Pedro Hilário",
+    "idade": 35,
+    "curso" : "Comunicação Social",
+    "disciplinas": ["Fotojornalismo", "Narrativa jornalística", "Teorias da Comunicação"]
+}
+
+]
+
+
+   const find = alunos.reduce(function(acumulador, aluno){
+       if(acumulador.nome === 'Maria da Conceição'){
+           return acumulador
+       }return aluno
+   })
+
+   const velhos = alunos.filter((aluno)=>{
+    if (aluno.idade > 60){
+        return aluno.nome
+    }
+   })
+
+
+
+    velhos.forEach((velho)=>{
+        console.log(velho.nome)
+    })
+
+
+
+    </script>
+</body>
+</html>
