@@ -1,0 +1,81 @@
+body{
+  background-color: hwb(210 7% 89%);
+}
+
+h1{
+  color: #F7E41E;
+  font-family: monospace;
+  font-size: 50px;
+}
+
+footer h1{
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 100px;
+}
+
+
+#global-container{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  min-height: 70vh;
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+
+#input-display{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.2fr 0.1fr;
+  max-width: fit-content;
+  margin-top: 10vh;
+}
+
+#input-display input{
+  font-family: monospace;
+  font-size: 22px;;
+  border-radius: 5px;
+}
+
+#input-display button{
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#tasks{
+  text-align: right;
+  margin-top: 7vh;
+  font-family: monospace;
+  color: hsla(55, 93%, 54%, 0.753);
+}
+
+.div-task{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+
+.task-list{
+  display: flex;
+  padding: 10px;
+  font-size: 25px;
+}
+
+#order-list button {
+  font-size: 18px;
+  height: 30px;
+  margin-right: 7px;
+  border-radius: 5px;
+}
+
+footer{
+  max-height: 25vh;
+}
+
+footer h1{
+  margin-right: 50px;
+  text-align: right;
+  font-size: 75px;
+}
