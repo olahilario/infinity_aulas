@@ -1,0 +1,40 @@
+<!-- [JS-A09] Você foi contratado para desenvolver um aplicativo de anotações simples que permita aos usuários adicionar notas de texto e excluí-las conforme necessário. O objetivo é criar uma interface de usuário amigável que funcione no navegador.
+
+Requisitos Técnicos
+
+1- Utilize HTML e JavaScript para criar a interface e a funcionalidade do aplicativo.
+2- Ao clicar no botão "Adicionar Nota", a nota digitada no campo de entrada de texto deve ser exibida na lista de notas abaixo do campo de entrada.
+3- Cada nota deve ser acompanhada de um botão "Excluir" que, quando clicado, removerá a nota da lista.
+4- O aplicativo deve ser responsivo, adaptando-se à largura da janela do navegador.
+5- Sinta-se à vontade para personalizar a aparência e o estilo do aplicativo conforme desejar. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="conteiner">
+
+    <div id="div_input">
+      <label for="current_note" id="label_current_note">.add your notes!</label>
+      <textarea name="current_note" id="current_note" placeholder="Don't forget to set your deadlines!"></textarea>
+      <button id="btn_add">Add</button>
+    </div>
+
+    <div id="notes">
+      <ul id="list_notes">
+
+      </ul>
+    </div>
+
+  </div>
+  
+
+
+  <script src="scripts.js"></script>
+</body>
+</html>

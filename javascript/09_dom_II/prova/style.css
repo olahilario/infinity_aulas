@@ -1,0 +1,105 @@
+body{
+  background-image: url('./background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Helvetica, sans-serif;
+}
+
+#conteiner{
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  grid-template-rows: 0.8fr 0.2fr;
+}
+
+#div_input{
+  display: grid;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#current_note{
+  border: none;
+  border-radius: 8px;
+  background-color: hsl(4, 61%, 87%);
+  padding: 10px;
+  font-size: large;
+  width: 25vw;
+  align-self: center;
+  justify-self: center;
+  color: #D9695F;
+
+}
+
+#notes{
+  grid-column: 2;
+  grid-row: 2;
+  min-height: 50vh;
+  /* overflow: auto; */
+  /* background-color: #91BDD9; */
+  border-radius: 10px;
+  margin: 15px 20px;
+}
+
+#label_current_note{
+  color: #D9695F;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 2rem;
+  align-content: center;
+}
+
+#btn_add{
+  background-color: #D95276;
+  font-size: larger;
+  font-weight: bolder;
+  border: 2px solid #D9695F;
+  border-radius: 7px;
+  color: #F2CCC9;
+  width: 5vw;
+  height: 5vh;
+  align-self: center;
+  justify-self: center;
+}
+
+.current_note{
+  font-size: 1.5rem;
+  font-family: Helvetica, sans-serif;
+  color: #D95276;
+  flex: 1;
+  list-style: square;
+  padding: 10px;
+  
+}
+
+.current_note:hover{
+  font-weight: bolder;
+}
+
+.div_current_note{
+  display: flex;
+  background-color: hsl(4, 61%, 87%);
+  border-radius: 15px;
+  margin: 10px 10px;
+
+}
+
+.btn_check_note{
+  font-family: Helvetica, sans-serif;
+  font-size: xx-large;
+  background-color: hsl(4, 61%, 87%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.btn_del_note{
+  font-family: Helvetica, sans-serif;
+  font-size: xx-large;
+  background-color: hsl(4, 61%, 87%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
