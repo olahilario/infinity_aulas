@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuário Aleatório</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .user-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .user-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .user-card .card-header {
+            background-color: #a516b1;
+            color: white;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .btn-primary {
+            background: #a516b1;
+            border: #a516b1;
+        }
+        .user-card .card-body {
+            padding: 2rem;
+        }
+        .user-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container user-container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card user-card">
+                    <div class="card-header">
+                        <h4>Usuário Aleatório</h4>
+                    </div>
+                    <div class="card-body">
+                        <img id="user-photo" class="user-photo" src="" alt="User Photo">
+                        <h5 id="user-name"></h5>
+                        <p id="user-email"></p>
+                        <button id="btn_new" class="btn btn-primary">Novo Usuário</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="ex05.js"></script>
+</body>
+</html>
