@@ -1,0 +1,44 @@
+[
+  {"titulo" : "O manifesto das espécies companheiras",
+  "autor" : "Donna Haraway",
+  "genero" : "Científico",
+  "ano" : "2020",
+  "avaliacao" : 8.5
+},
+
+{"titulo" : "O mundo assombrado pelos demônios",
+"autor" : "Carl Sagan",
+"genero" : "Científico",
+"ano" : "1984",
+"avaliacao" : 7
+},
+
+{"titulo" : "Ficando longe do fato de já estar meio que longe de tudo",
+"autor" : "David Foster Wallace",
+"genero" : "Jornalismo literário",
+"ano" : "2022",
+"avaliacao" : 8
+},
+
+{"titulo" : "O que diriam os animais",
+"autor" : "Vinciane Despret",
+"genero" : "Epistemologia",
+"ano" : "2020",
+"avaliacao" : 10
+},
+
+{"titulo" : "E se?",
+"autor" : "Randall Munroe",
+"genero" : "Científico",
+"ano" : "2019",
+"avaliacao" : 10
+},
+
+{"titulo" : "E se 2?",
+"autor" : "Randall Munroe",
+"genero" : "Científico",
+"ano" : "2023",
+"avaliacao" : 9
+}
+
+]

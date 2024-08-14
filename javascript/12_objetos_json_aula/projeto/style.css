@@ -1,0 +1,79 @@
+body{
+  background-image: url(./background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+h3{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: overline;
+}
+
+#container_geral{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 3;
+
+}
+
+#div_add{
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+
+
+}
+
+#div_add form input{
+  display: grid;
+  margin: auto;
+  margin-bottom: 2vh;
+  font-size: 1.5em;
+  text-align: center;
+  border: none;
+  border-radius: 7px;
+  min-width: 70%;
+
+}
+
+button{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+#div_search{
+  grid-column: 1;
+  grid-row: 3;
+  text-align: center;
+  margin-top: 10vh;
+
+}
+
+#div_search input{
+  font-size: 1.5em;
+  text-align: center;
+  border: none;
+  border-radius: 7px;
+
+
+}
+
+#div_result{
+  grid-column: 2;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+#div_result table, td{
+  border: 2px dotted black;
+}
+

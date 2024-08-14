@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de livros online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container_geral">
+    <div id="div_add">
+      <h3>Cadastro</h3>
+      <form>
+        <input type="text" name="title" id="title" placeholder="Título do livro" required>
+        <input type="text" name="autor" id="autor" placeholder="Autor(a)" required>
+        <input type="text" name="genero" id="genero" placeholder="Gênero" required>
+        <input type="text" name="ano" id="ano" placeholder="Ano de publicação" required>
+        <input type="number" name="avaliacao" id="avaliacao" placeholder="Avaliacao" min="1" max="10" required>
+        <button type="submit" id="cadastro_btn">Cadastrar</button>
+        <br><br><br>
+        <button type="button" id="listar_btn">Listar acervo</button>
+      </form>
+    </div>
+
+    <div id="div_search">
+      <h3>Localizar exemplar</h3>
+      <input type="text" name="search" id="search" placeholder="Busque um livro">
+      <button id="search_btn">Buscar!</button>
+
+    </div>
+
+    <div id="div_result">
+      <h3>Resultados da busca</h3>
+      <table>
+        <thead>
+          <th>TÍTULO</th>
+          <th>AUTOR</th>
+          <th>GÊNERO</th>
+          <th>ANO</th>
+          <th>AVALIAÇÃO</th>
+        </thead>
+        <tbody id="tbody">
+          <td></td>
+        </tbody>
+      </table>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
