@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saldo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container_global"></div>
+
+    <a href="index.html"><h1>Simulador de caixa eletrônico</h1></a>
+    <div id="dropdown_div">
+      <button id="menu_btn">SAQUE</button>
+      <div id="options">
+        <a href="saldo.html">Saldo</a>
+        <a href="saque.html">Saque</a>
+        <a href="deposito.html">Depósito</a>
+      </div>
+      
+    </div>
+
+    <div id="div_saque">
+
+      <p>Informe quanto você deseja sacar.</p>
+      <input type="text" id="saque" placeholder="Você pode sacar centavos também!">
+      <button class="confirm_btn" id="botao_saque" onclick="saque()">CONFIRMAR!</button>
+
+      <span id="erro_saque"></span>
+
+
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+body{
+  background-image: url(./background.png);
+  background-repeat: no-repeat;
+  background-color: hsl(219, 79%, 66%);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-family: monospace;
+  text-transform: uppercase;
+  text-align: center;
+  color: floralwhite;
+  background-color: hsl(219, 79%, 56%);
+  width: 30vw;
+  border-radius: 7px;
+  margin: auto;
+}
+
+h1:hover{
+  background-color: hsl(219, 79%, 36%);
+
+}
+
+#dropdown_div{
+  margin: auto;
+  width: 15vw;
+  text-align: center;
+
+}
+
+#menu_btn{
+  background-color: blueviolet;
+  border: none;
+  border-radius: 10px;
+  font-family: monospace;
+  color: floralwhite;
+  font-size: 3em;
+  
+}
+
+#menu_btn:hover{
+  cursor: pointer;
+  background-color: hsl(271, 76%, 43%);
+
+}
+
+
+#dropdown_div:hover #options{
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+#options{
+  display: none;
+  
+}
+
+a{
+  text-decoration: none;
+  background-color: blueviolet;
+  border-radius: 5px;
+  color: azure;
+  text-transform: uppercase;
+  margin: 1vh;
+}
+
+a:hover{
+  background-color: hsl(271, 76%, 43%);
+
+}
+
+p{
+  font-family: monospace;
+  font-size: 2rem;
+  text-align: center;
+  color: floralwhite;
+}
+
+span{
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-align: center;
+  color: crimson;
+  text-transform: uppercase;
+  margin-top: 2vh;
+}
+
+input {
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#div_saque{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+}
+
+.confirm_btn{
+  background-color: blueviolet;
+  border: none;
+  border-radius: 10px;
+  font-family: monospace;
+  color: floralwhite;
+  font-size: 1.5em;
+  width: 30%;
+  margin: 2vh auto;
+}
+
+.confirm_btn:hover{
+  cursor: pointer;
+  background-color: hsl(271, 76%, 43%);
+}
