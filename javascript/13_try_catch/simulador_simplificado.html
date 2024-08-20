@@ -1,0 +1,96 @@
+<!-- Na tela, deve haver um título 'Simulador de Caixa Eletrônico', um menu suspenso com opções para 'Consultar Saldo', 'Sacar' e 'Depositar', um campo de entrada onde o cliente possa inserir o valor da transação e um botão 'Realizar'. O resultado da operação deve ser exibido em um parágrafo.
+
+Use JavaScript para implementar as ações selecionadas. Defina um saldo inicial fictício de R$ 1000. Certifique-se de que o código trate erros, como valores inválidos e saldos insuficientes. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Bank</title>
+</head>
+<body>
+  <h1>Simulador de caixa eletrônico</h1>
+
+  <select name="operation" id="operation">
+    <option value="saldo">SALDO</option>
+    <option value="saque">SAQUE</option>
+    <option value="deposito">DEPÓSITO</option>
+  </select>
+  <input type="number" id="amount" placeholder="How much?">
+  <button id="button">REALIZAR</button>
+  <p id="result"></p>
+  
+  <script>
+
+    let saldo = 1000;
+
+    const operationSelector = document.querySelector('#operation');
+    const amountInput = document.querySelector('#amount');
+    const botao = document.querySelector('#button');
+    const resultDisplay = document.querySelector('#result');
+
+    botao.addEventListener('click', ()=>{
+      const amount = parseFloat(amountInput.value);
+      const operation = operationSelector.value;
+      switch(operation){
+        case 'saldo': 
+        result = consultarSaldo();
+        break;
+        case 'saque':
+          result = sacar(amount);
+          break;
+        case 'deposito':
+          result = depositar(amount);
+          break;
+      }
+      resultDisplay.textContent = result
+    })
+
+    function consultarSaldo(){
+      amountInput.value = ''
+      return `Seu saldo é de ${saldo}`
+    }
+
+    function sacar(amount){
+      try{
+        if (isNaN(amount) || amount < 0){
+          amountInput.value = ''
+          return 'Digite um valor válido!'
+        }
+        else if(amount > saldo){
+          amountInput.value = ''
+          return `Saldo insuficiente. Saldo atual: ${saldo.toFixed(2)}`
+        }
+        else if (amount > 0 && amount <= saldo){
+          saldo -= amount
+          amountInput.value = ''
+          return `Saque efetuado. Saldo atual: ${saldo.toFixed(2)}`
+        }
+      }
+      catch(error){
+        console.error(error.message)
+        return error.message
+      }
+    }
+
+    function depositar(amount){
+      try{
+        if(isNaN(amount) || amount < 0){
+          amountInput.value = ''
+          return 'Digite um valor válido!'
+        }
+        else{
+          saldo += amount
+          return `Depósito feito com sucesso. Saldo atual: ${saldo}`
+        }
+      }
+      catch(error){
+        return error.message
+      }
+    }
+    
+  </script>
+
+</body>
+</html>
