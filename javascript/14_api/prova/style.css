@@ -1,0 +1,23 @@
+h1{
+  font-family: monospace;
+  text-align: center;
+}
+
+.btn-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3vh;
+}
+
+.card-title{
+  color: rgb(25, 75, 241);
+  text-align: center;
+}
+
+.btn-outline-info{
+  display: flex;
+  margin: auto;
+  font-size: large;
+
+}
