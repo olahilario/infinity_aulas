@@ -48,18 +48,33 @@ h1{
   font-size: 1.3rem;
   border-radius: 5px;
   border: none;
+  justify-content: center;
+  display: inline;
+
 }
 
 #addBtn{
   margin-top: 3vh;
+  margin-left: 5vw;
   font-family: monospace;
   font-size: 1.4em;
-  background-color: #D9D9D9;
-  color: #0D0D0D;
+  background-color: #261B07;
+  color: #D9D9D9;
   border: none;
   border-radius: 10px;
   max-width: 8vw;
-  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#updateBtn{
+  margin-top: 3vh;
+  font-family: monospace;
+  font-size: 1.4em;
+  background-color:#D9D9D9;
+  color: #261B07;
+  border: none;
+  border-radius: 10px;
+  max-width: 10vw;
   cursor: pointer;
 }
 
@@ -74,7 +89,43 @@ h1{
 
 #tbody th, td{
   padding: 0;
-  border: 2px solid #F2B705;
+  border: 2px solid #261B07;
   line-height: 1;
 
+}
+
+#btn-edit{
+  background-color: #ffd101;
+  border: none;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+#btn-delete{
+  background-color: #ffd101;
+  border: none;
+  cursor: pointer;
+  font-size: x-large;
+
+}
+
+.contact_id{
+  visibility: hidden;
+}
+
+#id{
+  background-color: rgb(230, 230, 230);
+}
+
+table{
+  max-height: 2vh;
+}
+
+#msg{
+  color: #0D0D0D;
+  font-family: monospace;
+  text-transform: uppercase;
+  text-decoration: overline;
+  text-align: left;
+  margin-left: 5vw;
 }

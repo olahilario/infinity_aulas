@@ -12,23 +12,29 @@
     <h1>Contacts List</h1>
     <form id="form">
       <label for="name" id="label_add"> add your contact!
-        
+        <input type="text" class="contact_id" id="id" readonly placeholder="id">
         <input type="text" id="name" placeholder="name" required>
         <input type="tel" id="phone" placeholder="phone" required>
         <input type="email" id="email" placeholder="e-mail" required>
         <input type="text" id="pet" placeholder="pet" required>
-        <button type="submit" id="addBtn">Add!</button>
-
       </label>
     </form>
-
+    <div id="buttons">
+      <button type="submit" id="addBtn">Add!</button>
+      <button type="submit" id="updateBtn">Update!</button>
+    </div>
+    
     <table id="table">
       <thead>
         <tr>
+          <th class="contact_id">id</th>
           <th>name</th>
           <th>phone</th>
           <th>email</th>
           <th>pet</th>
+          <th>editar</th>
+          <th>apagar</th>
+
         </tr>
       </thead>
 
@@ -42,6 +48,8 @@
 
 
   </div>
+
+  <p id="msg"></p>
   
 
 
