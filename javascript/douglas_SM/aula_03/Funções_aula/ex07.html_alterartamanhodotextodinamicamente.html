@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="texto">Texto de exemplo.</p>
+<button onclick="aumentar()">Aumentar</button>
+<button onclick="diminuir()">Diminuir</button>
+
+<script>
+  let count = 14
+
+  function aumentar(){
+    const paragrafo = document.getElementById('texto')
+    count += 2
+  paragrafo.style.fontSize = `${count}px`
+  }
+
+  function diminuir(){
+    const paragrafo = document.getElementById('texto')
+    count -= 2
+    paragrafo.style.fontSize = `${count}px`
+  }
+
+</script>
+  
+</body>
+</html>

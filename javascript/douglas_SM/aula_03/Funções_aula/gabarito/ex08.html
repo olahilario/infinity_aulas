@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Usuário" required>
+    <input type="password" id="password" placeholder="Senha" required>
+    <button onclick="login()">Entrar</button>
+    <div id="error-message" class="error-message"></div>
+  </div>
+  <script>
+    const validUsername = "usuario";
+    const validPassword = "senha123";
+
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const errorMessage = document.getElementById('error-message');
+
+      if (username === validUsername && password === validPassword) {
+        alert("Login bem-sucedido!");
+        // Redirecionar ou executar outras ações após o login bem-sucedido
+      } else {
+        errorMessage.textContent = "Usuário ou senha incorretos.";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

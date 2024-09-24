@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Dinâmica de Imagens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    #image-preview {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .image-container {
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-container img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .image-container button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Biblioteca de Fotos</h1>
+
+  <input type="file" id="image-upload" multiple accept="image/*">
+  <div id="image-preview"></div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Crie uma função que receba dois números como parâmetros e retorne a multiplicação.</h1>
+  <input type="number" id="a" placeholder="Número 1">
+  <input type="number" id="b" placeholder="Número 2">
+  <button onclick="multiplicar()">Multiplicar</button>
+  <p id="multiplicacao"></p>
+
+
+
+  <script>
+
+    function multiplicar(){
+      const num1 = Number(document.getElementById('a').value)
+      const num2 = Number(document.getElementById('b').value)
+      const resultado = document.getElementById('multiplicacao')
+      const multiplica = num1 * num2
+      resultado.innerText = multiplica
+      console.log(multiplica)
+    }
+
+  </script>
+
+
+</body>
+
+</html>

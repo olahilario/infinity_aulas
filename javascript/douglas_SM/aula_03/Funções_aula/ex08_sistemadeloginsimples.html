@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Crie um sistema de login</h1>
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Usuário" required>
+    <input type="password" id="password" placeholder="Senha" required>
+    <button onclick="login()">Entrar</button>
+    <div id="error-message" class="error-message"></div>
+  </div>
+
+  <script>
+
+    const usuarios = [
+      {user: 'pedro', password: 'senha'},
+      {user: 'admin', password: 'admin'},
+      {user: 'maria', password: 'senhadamaria'}
+    ]
+
+  function login(){
+    let auth = false
+    const username = document.getElementById('username').value
+    const senha = document.getElementById('password').value
+    const msg = document.getElementById('error-message')
+
+    const resultado = msg.querySelector('p')
+    if (!resultado){
+      let resultado = document.createElement('p')
+      msg.append(resultado)
+    }
+    usuarios.forEach((usuario)=>{
+      if (usuario.user === username && usuario.password === senha){
+        auth = true
+      }
+    })
+    if (auth){
+      resultado.innerText = "Login feito com sucesso"
+    }
+    else{
+      resultado.innerText = "Dados incorretos!"
+    }
+  }
+
+
+  </script>
+  
+
+</body>
+
+</html>

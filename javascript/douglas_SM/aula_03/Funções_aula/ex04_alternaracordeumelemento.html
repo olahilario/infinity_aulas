@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Alterne a visibilidade de um elemento com querySelector</h1>
+  <button onclick="invisible()">Mostrar/Ocultar</button>
+  <div id="seccao">Esta é uma seção que pode ser escondida.</div>
+
+  <script>
+    function invisible(){
+      const div = document.getElementById('seccao')
+      div.style.visibility == '' ? div.style.visibility = 'hidden' : div.style.visibility = ''
+      console.log(div.style.visibility)
+    }
+  </script>
+
+</body>
+
+</html>

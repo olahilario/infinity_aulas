@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Altere o conteúdo de todos os elementos de uma mesma classe.</h1>
+  <button onclick="alterarTexto()">Alterar Texto</button>
+  <p class="info">Texto 1</p>
+  <p class="info">Texto 2</p>
+
+  <script>
+    function alterarTexto(){
+      const alvos = document.querySelectorAll('.info')
+      console.log(alvos)
+      alvos.forEach((alvo)=>{
+        alvo.innerHTML = 'lalalalalalala'
+      })
+ 
+    }
+  </script>
+
+</body>
+
+</html>

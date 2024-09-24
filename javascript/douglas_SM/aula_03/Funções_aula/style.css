@@ -1,0 +1,71 @@
+body{
+  background-color: rgba(0, 0, 0, 0.781);
+  color: #fafafa;
+}
+header{
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  padding: 2px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.781);
+
+}
+#funcoes h1{
+  width: 50vw;
+  height: 20vh;
+}
+code{
+  background-color: rgba(0, 0, 0, 0.712);
+  text-align: justify;
+}
+span{
+  color: #fafafa;
+}
+a, button{
+  border-left: 2px solid rgb(3, 3, 3);
+  background-color: rgb(61, 69, 77);
+  color: #fafafa  ;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.2rem;
+  text-align: justify;
+  border-radius: 7px;
+
+  
+}
+li{
+  border: 0.1px solid;
+  border-radius: 70px;
+  background-color: rgb(61, 69, 77);
+  list-style-type: none;
+  text-align: center;
+}
+form{
+  background-color: black;
+  padding: 10px;
+}
+input{
+  border-radius: 7px;
+}
+p{
+  border-radius: 2px;
+  background-color: rgba(10, 5, 0, 0.836);
+  height: 25vh;
+  transition: 0.4s
+  ;
+}
+nav{
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+}
+.content{
+padding: 125px;
+  background-color: rgba(0, 0, 0, 0.568);
+  height: 100vh;
+}
+p:hover{
+  background-color: coral;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="cpf" placeholder="Digite o CPF">
+  <button onclick="validarCPF()">Validar</button>
+  <p id="resultadoCPF"></p>
+
+  <script>
+    function validarCPF() {
+      const cpf = document.getElementById('cpf').value;
+      document.getElementById('resultadoCPF').innerText = cpf.length === 11 ? 'CPF válido' : 'CPF inválido';
+    }
+  </script>
+
+
+</body>
+
+</html>

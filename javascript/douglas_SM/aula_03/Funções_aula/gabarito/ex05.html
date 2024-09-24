@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="alterarTexto()">Alterar Texto</button>
+  <p class="info">Texto 1</p>
+  <p class="info">Texto 2</p>
+
+  <script>
+    function alterarTexto() {
+      const textos = document.getElementsByClassName('info');
+      for (let i = 0; i < textos.length; i++) {
+        textos[i].innerText = 'Texto alterado!';
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

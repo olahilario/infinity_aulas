@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="number" id="a" placeholder="Número 1">
+  <input type="number" id="b" placeholder="Número 2">
+  <button onclick="multiplicar()">Multiplicar</button>
+  <p id="multiplicacao"></p>
+
+  <script>
+    function multiplicar() {
+      const a = Number(document.getElementById('a').value);
+      const b = Number(document.getElementById('b').value);
+      const resultado = a * b;
+      document.getElementById('multiplicacao').innerText = `Resultado: ${resultado}`;
+    }
+  </script>
+
+
+</body>
+
+</html>

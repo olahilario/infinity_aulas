@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Dinâmica de Imagens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    #image-preview {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .image-container {
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-container img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .image-container button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Biblioteca de Fotos</h1>
+
+  <input type="file" id="image-upload" multiple accept="image/*">
+  <div id="image-preview"></div>
+
+  <script>
+    // Função para carregar as imagens do localStorage
+    function loadImages() {
+      const previewContainer = document.getElementById('image-preview');
+      previewContainer.innerHTML = '';
+
+      // Recupera as imagens do localStorage
+      const storedImages = JSON.parse(localStorage.getItem('imageLibrary')) || [];
+
+      storedImages.forEach((imageData, index) => {
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('image-container');
+
+        const img = document.createElement('img');
+        img.src = imageData;
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remover';
+        removeButton.addEventListener('click', function () {
+          removeImage(index);
+        });
+
+        imageContainer.appendChild(img);
+        imageContainer.appendChild(removeButton);
+        previewContainer.appendChild(imageContainer);
+      });
+    }
+
+    // Função para adicionar imagens
+    document.getElementById('image-upload').addEventListener('change', function (event) {
+      const files = event.target.files;
+      const storedImages = JSON.parse(localStorage.getItem('imageLibrary')) || [];
+
+      Array.from(files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          storedImages.push(e.target.result);
+
+          // Atualiza o localStorage com as novas imagens
+          localStorage.setItem('imageLibrary', JSON.stringify(storedImages));
+
+          // Recarrega as imagens na página
+          loadImages();
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+
+    // Função para remover uma imagem pelo índice
+    function removeImage(index) {
+      const storedImages = JSON.parse(localStorage.getItem('imageLibrary')) || [];
+      storedImages.splice(index, 1);
+
+      // Atualiza o localStorage
+      localStorage.setItem('imageLibrary', JSON.stringify(storedImages));
+
+      // Recarrega as imagens na página
+      loadImages();
+    }
+
+    // Carrega as imagens ao abrir a página
+    window.onload = loadImages;
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <h1> Crie um editor de texto que salva automaticamente o conteúdo no local storage a cada 5 segundos.</h1>
+  <h2>Nesse desafio você deverá pesquisar sobre Local Storage e sobre o a função setTimeout e setInterval</h2>
+  <textarea id="editor" cols="30" rows="10" placeholder="Digite seu texto aqui..."></textarea>
+<p id="status"></p>
+</head>
+<body>
+  
+  <script>
+    localStorage.setItem('savedText', '')
+    text = localStorage.getItem('savedText') || '';
+
+    function saveText(){
+      const text = document.getElementById('editor').value
+      const status = document.getElementById('status')
+      localStorage.setItem('savedText', text)
+      status.textContent = 'salvando...'
+      console.log(localStorage.getItem('savedText'))
+      setTimeout(()=>{status.textContent = ''}, 2000)
+    }
+
+    setInterval(saveText, 5000)
+
+  </script>
+  
+</body>
+</html>

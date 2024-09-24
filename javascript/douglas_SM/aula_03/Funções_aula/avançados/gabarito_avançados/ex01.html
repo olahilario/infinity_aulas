@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="pesquisa" placeholder="Pesquisar..." onkeyup="filtrarLista()">
+  <ul id="listaNomes">
+    <li>João</li>
+    <li>Ana</li>
+    <li>Pedro</li>
+    <li>Maria</li>
+  </ul>
+
+  <script>
+    function filtrarLista() {
+      const pesquisa = document.getElementById('pesquisa').value.toLowerCase();
+      const itens = document.querySelectorAll('#listaNomes li');
+      itens.forEach(item => {
+        if (item.innerText.toLowerCase().includes(pesquisa)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+
+</body>
+
+</html>

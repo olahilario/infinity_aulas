@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Crie um campo de pesquisa que filtre os itens de uma lista em tempo real conforme o usuário digita</h1>
+  <ul id="listaNomes">
+    <li>João</li>
+    <li>Ana</li>
+    <li>Pedro</li>
+    <li>Maria</li>
+  </ul>
+
+  <input type="text" id="pesquisa" placeholder="Search!" onkeyup="filtraLista()">
+
+  <script>
+    function filtraLista(){
+      const items = document.querySelectorAll('#listaNomes li')
+      const search = document.getElementById('pesquisa').value.toLowerCase()
+      items.forEach(item=>{
+        if (item.textContent.toLowerCase().includes(search)){
+          item.style.display = ''
+        }
+        else{
+          item.style.display = 'none'
+        }
+      })
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>

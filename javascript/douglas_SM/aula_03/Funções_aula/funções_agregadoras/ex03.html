@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Você tem uma lista de compras, onde cada item contém um nome, preço e quantidade. Use:
+
+    map para calcular o custo total de cada item (preço * quantidade).
+    filter para remover os itens que custam menos de 20 reais.
+    reduce para calcular o custo total da compra.
+    forEach para exibir cada item filtrado no console.</h1>
+  
+</body>
+<script>
+  const compras = [
+    { nome: "Arroz", preco: 5, quantidade: 10 },
+    { nome: "Feijão", preco: 7, quantidade: 2 },
+    { nome: "Carne", preco: 30, quantidade: 1 },
+    { nome: "Leite", preco: 4, quantidade: 5 }
+];
+
+  const custo_total = compras.map(e=> e.preco*e.quantidade)
+  console.log(custo_total)
+
+  const baratos = compras.filter(produto => produto.preco < 20)
+  console.log(baratos)
+
+  const valor_total = custo_total.reduce((acc, current)=> acc+current)
+  console.log(valor_total)
+
+  compras.forEach(produto => console.log(`${produto.nome} || R$${produto.preco},00 || qtd: ${produto.quantidade} || `))
+</script>
+</html>

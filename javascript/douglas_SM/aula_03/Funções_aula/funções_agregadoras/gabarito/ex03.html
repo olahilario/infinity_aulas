@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const compras = [
+    { nome: "Arroz", preco: 5, quantidade: 10 },
+    { nome: "Feijão", preco: 7, quantidade: 2 },
+    { nome: "Carne", preco: 30, quantidade: 1 },
+    { nome: "Leite", preco: 4, quantidade: 5 }
+];
+
+// Calcular o custo total de cada item
+const custoTotalItens = compras.map(item => ({
+    ...item,
+    custoTotal: item.preco * item.quantidade
+}));
+
+// Filtrar itens com custo total maior ou igual a 20
+const itensFiltrados = custoTotalItens.filter(item => item.custoTotal >= 20);
+
+// Calcular o total da compra
+const totalCompra = itensFiltrados.reduce((acc, item) => acc + item.custoTotal, 0);
+
+// Exibir cada item filtrado
+itensFiltrados.forEach(item => console.log(`${item.nome}: R$${item.custoTotal}`));
+
+console.log(`Total da compra: R$${totalCompra}`);
+
+  </script>
+  
+</body>
+</html>

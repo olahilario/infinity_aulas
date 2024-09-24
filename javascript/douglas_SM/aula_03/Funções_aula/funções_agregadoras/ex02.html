@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    Dado um array de números, use filter para remover os números ímpares, e então utilize reduce para somar os números restantes.
+  </h1>
+
+
+  <script>
+    const lista = [5,15,23,54,80,321,72,13,17,731]
+    const pares = lista.filter(n => n % 2 === 0)
+    console.log(pares)
+    soma = pares.reduce((acc, current)=>{
+      return acc + current
+    })
+    console.log(soma)
+  </script>
+</body>
+
+</html>

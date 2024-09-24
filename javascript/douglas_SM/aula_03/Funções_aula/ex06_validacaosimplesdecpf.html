@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Valide um CPF simples com uma função.</h1>
+  <h2>O cpf possui 11 dígitos ?</h2>
+  <input type="text" id="cpf" placeholder="Digite o CPF">
+  <button onclick="validarCPF()">Validar</button>
+  <p id="resultadoCPF"></p>
+
+  <script>
+
+    function validarCPF(){
+      const cpf = document.getElementById('cpf').value
+      const resultado = document.getElementById('resultadoCPF')
+      if (cpf.length === 11){
+        resultado.innerText = 'CPF Válido!'
+        return true
+      }
+      else{
+        resultado.innerText = 'CPF Inválido!'
+        return false
+      }
+    }
+
+
+  </script>
+
+</body>
+
+</html>

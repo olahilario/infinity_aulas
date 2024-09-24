@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="votar('opcao1')">Opção 1</button>
+  <button onclick="votar('opcao2')">Opção 2</button>
+
+  <p>Opção 1: <span id="votos1">0</span></p>
+  <progress id="barra1" value="0" max="100"></progress>
+  <p>Opção 2: <span id="votos2">0</span></p>
+  <progress id="barra2" value="0" max="100"></progress>
+
+  <script>
+    let votos1 = 0, votos2 = 0;
+
+    function votar(opcao) {
+      if (opcao === 'opcao1') votos1++;
+      else votos2++;
+
+      const totalVotos = votos1 + votos2;
+      document.getElementById('votos1').innerText = votos1;
+      document.getElementById('votos2').innerText = votos2;
+      document.getElementById('barra1').value = (votos1 / totalVotos) * 100;
+      document.getElementById('barra2').value = (votos2 / totalVotos) * 100;
+    }
+  </script>
+
+
+</body>
+
+</html>
